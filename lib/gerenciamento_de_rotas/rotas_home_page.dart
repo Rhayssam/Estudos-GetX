@@ -3,21 +3,23 @@ import 'package:get/get.dart';
 import 'package:jornada_getx/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/widgets/custom_elevated_button.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class RotasHomePage extends StatelessWidget {
+  const RotasHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Home Page'),
+      appBar: CustomAppBar(
+        title: 'Rotas Home Page',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomElevatedButton(
-              texto: 'Gerenciamento de Rotas',
+              texto: 'To',
               onPressed: () {
-                Get.toNamed('/rotas_home_page');
+                Get.toNamed('/rotas_home_page/to');
               },
             ),
           ],
