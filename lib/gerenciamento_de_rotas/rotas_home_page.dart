@@ -28,6 +28,12 @@ class RotasHomePage extends StatelessWidget {
                 Get.toNamed('/rotas_home_page/back');
               },
             ),
+            CustomElevatedButton(
+              texto: 'Off',
+              onPressed: () {
+                Get.toNamed('/rotas_home_page/off');
+              },
+            ),
           ],
         ),
       ),
