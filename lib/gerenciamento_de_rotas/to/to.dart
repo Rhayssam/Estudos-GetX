@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/to/page1.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/to/page2.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 

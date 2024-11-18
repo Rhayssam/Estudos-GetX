@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/back/page1.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/back/page2.dart';
 
 class Back extends StatelessWidget {
   const Back({super.key});
