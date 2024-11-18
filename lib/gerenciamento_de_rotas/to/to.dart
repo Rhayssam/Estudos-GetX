@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/to/page1.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/to/page2.dart';
-import 'package:jornada_getx/widgets/custom_app_bar.dart';
-import 'package:jornada_getx/widgets/custom_elevated_button.dart';
+import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
+import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 
 class To extends StatelessWidget {
   const To({super.key});
@@ -22,12 +22,6 @@ class To extends StatelessWidget {
               texto: 'Ir para a página 1',
               onPressed: () {
                 Get.to(() => Page1());
-              },
-            ),
-            CustomElevatedButton(
-              texto: 'Ir para a página 2',
-              onPressed: () {
-                Get.to(() => Page2());
               },
             ),
           ],

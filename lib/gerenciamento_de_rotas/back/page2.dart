@@ -3,29 +3,27 @@ import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 
-class RotasHomePage extends StatelessWidget {
-  const RotasHomePage({super.key});
+class Page2 extends StatelessWidget {
+  const Page2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: 'Rotas Home Page',
-      ),
+      appBar: CustomAppBar(title: 'Back - Página 2'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomElevatedButton(
-              texto: 'To',
-              onPressed: () {
-                Get.toNamed('/rotas_home_page/to');
-              },
+            Text(
+              'Get.back()',
+              style: TextStyle(
+                fontSize: 32.0,
+              ),
             ),
             CustomElevatedButton(
-              texto: 'Back',
+              texto: 'Voltar para a Página 1',
               onPressed: () {
-                Get.toNamed('/rotas_home_page/back');
+                Get.back();
               },
             ),
           ],
