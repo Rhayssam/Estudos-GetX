@@ -40,6 +40,12 @@ class RotasHomePage extends StatelessWidget {
                 Get.toNamed('/rotas_home_page/offAll');
               },
             ),
+            CustomElevatedButton(
+              texto: 'Envio de Parâmetros',
+              onPressed: () {
+                Get.toNamed('/rotas_home_page/envioParametros');
+              },
+            ),
           ],
         ),
       ),

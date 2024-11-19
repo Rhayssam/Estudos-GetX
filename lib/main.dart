@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/back/back.dart';
+import 'package:jornada_getx/gerenciamento_de_rotas/envio_parametros/envio.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/off/off.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/offAll/offAll.dart';
 import 'package:jornada_getx/gerenciamento_de_rotas/rotas_home_page.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/back', page: () => Back()),
             GetPage(name: '/off', page: () => Off()),
             GetPage(name: '/offAll', page: () => OffAll()),
+            GetPage(name: '/envioParametros', page: () => Envio()),
           ],
         ),
       ],
