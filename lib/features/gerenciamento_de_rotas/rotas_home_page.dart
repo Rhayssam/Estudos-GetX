@@ -10,7 +10,7 @@ class RotasHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: 'Rotas Home Page',
+        title: '1 - Gerenciamento de Rotas',
       ),
       body: Center(
         child: Column(
@@ -44,6 +44,12 @@ class RotasHomePage extends StatelessWidget {
               texto: 'Envio de Parâmetros',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/envioParametros');
+              },
+            ),
+            CustomElevatedButton(
+              texto: 'Await de Parâmetros',
+              onPressed: () {
+                Get.toNamed('/rotas_home_page/awaitParametros');
               },
             ),
           ],

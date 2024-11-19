@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/offAll/page4.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/offAll/page4.dart';
 
-import '../../core/widgets/custom_elevated_button.dart';
+import '../../../core/widgets/custom_elevated_button.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});

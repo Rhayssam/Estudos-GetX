@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/back/back.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/envio_parametros/envio.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/off/off.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/offAll/offAll.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/rotas_home_page.dart';
-import 'package:jornada_getx/gerenciamento_de_rotas/to/to.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/back/back.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/envio_parametros/envio.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/off/off.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/offAll/offAll.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/rotas_home_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/to/to.dart';
+import 'package:jornada_getx/features/rotas_nomeadas/rotas_nomeadas_home_page.dart';
 import 'package:jornada_getx/home_page.dart';
 
 void main() {
@@ -36,8 +38,12 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/off', page: () => Off()),
             GetPage(name: '/offAll', page: () => OffAll()),
             GetPage(name: '/envioParametros', page: () => Envio()),
+            GetPage(name: '/awaitParametros', page: () => AwaitParametros()),
           ],
         ),
+        GetPage(
+            name: '/rotas_nomeadas_home_page',
+            page: () => RotasNomeadasHomePage()),
       ],
     );
   }

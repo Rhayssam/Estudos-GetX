@@ -2,28 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/page1.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AwaitParametros extends StatelessWidget {
+  const AwaitParametros({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Home Page'),
+      appBar: CustomAppBar(title: 'Await Parâmetros'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomElevatedButton(
-              texto: '1 - Gerenciamento de Rotas',
-              onPressed: () {
-                Get.toNamed('/rotas_home_page');
-              },
-            ),
-            CustomElevatedButton(
-              texto: '2 - Rotas Nomeadas',
-              onPressed: () {
-                Get.toNamed('/rotas_nomeadas_home_page');
+              texto: 'Ir para a Página 1',
+              onPressed: () async {
+                final result = await Get.to(() => Page1());
+                debugPrint(result);
               },
             ),
           ],
