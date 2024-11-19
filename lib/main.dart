@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+// Navegação de Rotas comuns
 import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/back/back.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/envio_parametros/envio.dart';
@@ -7,6 +8,11 @@ import 'package:jornada_getx/features/gerenciamento_de_rotas/off/off.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/offAll/offAll.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/rotas_home_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/to/to.dart';
+// Navegação de Rotas Nomeadas
+import 'package:jornada_getx/features/rotas_nomeadas/iniciais/iniciais.dart';
+import 'package:jornada_getx/features/rotas_nomeadas/iniciais/page1.dart';
+import 'package:jornada_getx/features/rotas_nomeadas/iniciais/page2.dart';
+import 'package:jornada_getx/features/rotas_nomeadas/iniciais/page3.dart';
 import 'package:jornada_getx/features/rotas_nomeadas/rotas_nomeadas_home_page.dart';
 import 'package:jornada_getx/home_page.dart';
 
@@ -41,9 +47,23 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/awaitParametros', page: () => AwaitParametros()),
           ],
         ),
+        //* Estudo de Rotas Nomeadas
         GetPage(
             name: '/rotas_nomeadas_home_page',
-            page: () => RotasNomeadasHomePage()),
+            page: () => RotasNomeadasHomePage(),
+            children: [
+              //* Rotas pertencentes ao tema estudo de rotas nomeadas
+              GetPage(
+                name: '/iniciais',
+                page: () => Iniciais(),
+                //* Rotas pertencentes ao tema estudo de rotas nomeadas
+                children: [
+                  GetPage(name: '/page1', page: () => Page1()),
+                  GetPage(name: '/page2', page: () => Page2()),
+                  GetPage(name: '/page3', page: () => Page3()),
+                ],
+              ),
+            ]),
       ],
     );
   }
