@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/conceito/conceito.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
 // Navegação de Rotas comuns
 import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
@@ -70,6 +71,9 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/dependencias_home_page',
           page: () => DependenciasHomePage(),
+          children: [
+            GetPage(name: '/conceito', page: () => Conceito()),
+          ],
         ),
       ],
     );

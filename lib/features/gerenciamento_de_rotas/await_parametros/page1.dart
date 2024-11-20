@@ -16,7 +16,7 @@ class Page1 extends StatelessWidget {
           CustomElevatedButton(
             texto: 'Voltar uma página',
             onPressed: () {
-              Get.back(result: 'Voltando o parametro foda');
+              Get.back(result: 'Voltando o parametro legal rsrs');
             },
           ),
         ],
