@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
 // Navegação de Rotas comuns
 import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/back/back.dart';
@@ -49,21 +50,27 @@ class MyApp extends StatelessWidget {
         ),
         //* Estudo de Rotas Nomeadas
         GetPage(
-            name: '/rotas_nomeadas_home_page',
-            page: () => RotasNomeadasHomePage(),
-            children: [
+          name: '/rotas_nomeadas_home_page',
+          page: () => RotasNomeadasHomePage(),
+          children: [
+            //* Rotas pertencentes ao tema estudo de rotas nomeadas
+            GetPage(
+              name: '/iniciais',
+              page: () => Iniciais(),
               //* Rotas pertencentes ao tema estudo de rotas nomeadas
-              GetPage(
-                name: '/iniciais',
-                page: () => Iniciais(),
-                //* Rotas pertencentes ao tema estudo de rotas nomeadas
-                children: [
-                  GetPage(name: '/page1', page: () => Page1()),
-                  GetPage(name: '/page2', page: () => Page2()),
-                  GetPage(name: '/page3', page: () => Page3()),
-                ],
-              ),
-            ]),
+              children: [
+                GetPage(name: '/page1', page: () => Page1()),
+                GetPage(name: '/page2', page: () => Page2()),
+                GetPage(name: '/page3', page: () => Page3()),
+              ],
+            ),
+          ],
+        ),
+        //* Estudo de Gerenciamento de Dependências
+        GetPage(
+          name: '/dependencias_home_page',
+          page: () => DependenciasHomePage(),
+        ),
       ],
     );
   }

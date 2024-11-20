@@ -26,6 +26,12 @@ class HomePage extends StatelessWidget {
                 Get.toNamed('/rotas_nomeadas_home_page');
               },
             ),
+            CustomElevatedButton(
+              texto: '3 - Gerenciamento de Dependências',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page');
+              },
+            ),
           ],
         ),
       ),
