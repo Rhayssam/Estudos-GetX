@@ -9,11 +9,11 @@ import 'package:jornada_getx/features/gerenciamento_de_rotas/offAll/offAll.dart'
 import 'package:jornada_getx/features/gerenciamento_de_rotas/rotas_home_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/to/to.dart';
 // Navegação de Rotas Nomeadas
-import 'package:jornada_getx/features/rotas_nomeadas/iniciais/iniciais.dart';
-import 'package:jornada_getx/features/rotas_nomeadas/iniciais/page1.dart';
-import 'package:jornada_getx/features/rotas_nomeadas/iniciais/page2.dart';
-import 'package:jornada_getx/features/rotas_nomeadas/iniciais/page3.dart';
-import 'package:jornada_getx/features/rotas_nomeadas/rotas_nomeadas_home_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/iniciais.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page1.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page2.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page3.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/rotas_nomeadas_home_page.dart';
 import 'package:jornada_getx/home_page.dart';
 
 void main() {
