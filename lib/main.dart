@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/conceito/conceito.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/lazyPut/lazyPut.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/put/put.dart';
 // Navegação de Rotas comuns
 import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
@@ -75,6 +76,7 @@ class MyApp extends StatelessWidget {
           children: [
             GetPage(name: '/conceito', page: () => Conceito()),
             GetPage(name: '/put', page: () => Put()),
+            GetPage(name: '/lazyPut', page: () => LazyPut()),
           ],
         ),
       ],

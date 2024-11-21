@@ -26,6 +26,12 @@ class DependenciasHomePage extends StatelessWidget {
                 Get.toNamed('/dependencias_home_page/put');
               },
             ),
+            CustomElevatedButton(
+              texto: '3 - LazyPut',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/lazyPut');
+              },
+            ),
           ],
         ),
       ),
