@@ -20,6 +20,12 @@ class DependenciasHomePage extends StatelessWidget {
                 Get.toNamed('/dependencias_home_page/conceito');
               },
             ),
+            CustomElevatedButton(
+              texto: '2 - Put',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/put');
+              },
+            ),
           ],
         ),
       ),

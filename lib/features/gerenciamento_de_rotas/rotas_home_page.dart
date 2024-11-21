@@ -17,37 +17,37 @@ class RotasHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomElevatedButton(
-              texto: 'To',
+              texto: '1 - To',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/to');
               },
             ),
             CustomElevatedButton(
-              texto: 'Back',
+              texto: '2 - Back',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/back');
               },
             ),
             CustomElevatedButton(
-              texto: 'Off',
+              texto: '3 - Off',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/off');
               },
             ),
             CustomElevatedButton(
-              texto: 'OffAll',
+              texto: '4 - OffAll',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/offAll');
               },
             ),
             CustomElevatedButton(
-              texto: 'Envio de Parâmetros',
+              texto: '5 - Envio de Parâmetros',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/envioParametros');
               },
             ),
             CustomElevatedButton(
-              texto: 'Await de Parâmetros',
+              texto: '6 - Await de Parâmetros',
               onPressed: () {
                 Get.toNamed('/rotas_home_page/awaitParametros');
               },
