@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/conceito/conceito.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/lazyPut/lazyPut.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/put/put.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/putAsync/putAsync.dart';
+// Rota inicial
+import 'package:jornada_getx/home_page.dart';
 // Navegação de Rotas comuns
-import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/rotas_home_page.dart';
+// Sub-Rotas
+import 'package:jornada_getx/features/gerenciamento_de_rotas/to/to.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/back/back.dart';
-import 'package:jornada_getx/features/gerenciamento_de_rotas/envio_parametros/envio.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/off/off.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/offAll/offAll.dart';
-import 'package:jornada_getx/features/gerenciamento_de_rotas/rotas_home_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_rotas/to/to.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/envio_parametros/envio.dart';
+import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
 // Navegação de Rotas Nomeadas
+import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/rotas_nomeadas_home_page.dart';
+// Sub-Rotas
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/iniciais.dart';
+// Sub-Rotas
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page1.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page2.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page3.dart';
-import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/rotas_nomeadas_home_page.dart';
-import 'package:jornada_getx/home_page.dart';
+// Navegação de Rotas Nomeadas
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
+// Sub-Rotas
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/conceito/conceito.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/put/put.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/lazyPut/lazyPut.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/putAsync/putAsync.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/create/create.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,6 +86,7 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/put', page: () => Put()),
             GetPage(name: '/lazyPut', page: () => LazyPut()),
             GetPage(name: '/putAsync', page: () => PutAsync()),
+            GetPage(name: '/create', page: () => Create()),
           ],
         ),
       ],

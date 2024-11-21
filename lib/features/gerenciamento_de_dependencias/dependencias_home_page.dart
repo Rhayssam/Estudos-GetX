@@ -38,6 +38,12 @@ class DependenciasHomePage extends StatelessWidget {
                 Get.toNamed('/dependencias_home_page/putAsync');
               },
             ),
+            CustomElevatedButton(
+              texto: '5 - Create',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/create');
+              },
+            ),
           ],
         ),
       ),
