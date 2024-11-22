@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/delete.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_exemplo.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_page.dart';
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
-// Navegação de Rotas comuns
+// 1 - Navegação de Rotas comuns
 import 'package:jornada_getx/features/gerenciamento_de_rotas/rotas_home_page.dart';
 // Sub-Rotas
 import 'package:jornada_getx/features/gerenciamento_de_rotas/to/to.dart';
@@ -12,7 +14,7 @@ import 'package:jornada_getx/features/gerenciamento_de_rotas/off/off.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/offAll/offAll.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/envio_parametros/envio.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas/await_parametros/await_parametros.dart';
-// Navegação de Rotas Nomeadas
+// 2 - Navegação de Rotas Nomeadas
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/rotas_nomeadas_home_page.dart';
 // Sub-Rotas
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/iniciais.dart';
@@ -20,7 +22,7 @@ import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/i
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page1.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page2.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page3.dart';
-// Navegação de Rotas Nomeadas
+// 3 - Navegação de Rotas Nomeadas
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
 // Sub-Rotas
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/conceito/conceito.dart';
@@ -29,6 +31,7 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/lazyPut/lazy
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/putAsync/putAsync.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/create/create.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/update.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/delete.dart';
 
 void main() {
   runApp(const MyApp());
@@ -92,6 +95,26 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/update', page: () => Update(), children: [
               GetPage(name: '/delete', page: () => Delete()),
             ]),
+            GetPage(
+              name: '/bindings',
+              binding: BindingsExemplo(),
+              page: () => BindingsPage(),
+            ),
+            GetPage(
+              name: '/bindings_builder',
+              binding: BindingsBuilder(
+                () {
+                  Get.put(BindingsController(nome: 'Bindings Builder'));
+                },
+              ),
+              page: () => BindingsPage(),
+            ),
+            GetPage(
+              name: '/bindings_builder_put',
+              binding: BindingsBuilder.put(
+                  () => BindingsController(nome: 'Bindings Builder Put')),
+              page: () => BindingsPage(),
+            ),
           ],
         ),
       ],

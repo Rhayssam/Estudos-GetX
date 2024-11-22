@@ -50,6 +50,24 @@ class DependenciasHomePage extends StatelessWidget {
                 Get.toNamed('/dependencias_home_page/update');
               },
             ),
+            CustomElevatedButton(
+              texto: '7 - Bindings',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/bindings');
+              },
+            ),
+            CustomElevatedButton(
+              texto: '8 - Bindings Builder',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/bindings_builder');
+              },
+            ),
+            CustomElevatedButton(
+              texto: '9 - Bindings Builder',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/bindings_builder_put');
+              },
+            ),
           ],
         ),
       ),

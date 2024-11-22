@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/delete_controller.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/update_controller.dart';
 
 class Delete extends StatefulWidget {
   @override
