@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/delete.dart';
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
 // Navegação de Rotas comuns
@@ -27,6 +28,7 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/put/put.dart
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/lazyPut/lazyPut.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/putAsync/putAsync.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/create/create.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/update.dart';
 
 void main() {
   runApp(const MyApp());
@@ -87,6 +89,9 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/lazyPut', page: () => LazyPut()),
             GetPage(name: '/putAsync', page: () => PutAsync()),
             GetPage(name: '/create', page: () => Create()),
+            GetPage(name: '/update', page: () => Update(), children: [
+              GetPage(name: '/delete', page: () => Delete()),
+            ]),
           ],
         ),
       ],
