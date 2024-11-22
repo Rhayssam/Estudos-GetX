@@ -1,16 +1,6 @@
-# jornada_getx
+# Estudos-GetX
 
-A new Flutter project.
+Essa é uma aplicação muito simples, apenas para fins de estudo e para mostrar algumas das funcionalidades do Get (Get)
+## 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Link do package: [get (GetX) - Package](https://pub.dev/packages/get) 
