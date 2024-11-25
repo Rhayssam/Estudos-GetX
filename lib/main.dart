@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_controller.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_exemplo.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_page.dart';
+
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
 // 1 - Navegação de Rotas comuns
@@ -22,7 +20,7 @@ import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/i
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page1.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page2.dart';
 import 'package:jornada_getx/features/gerenciamento_de_rotas_nomeadas/iniciais/page3.dart';
-// 3 - Navegação de Rotas Nomeadas
+// 3 - Gerenciamento de Dependências
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/dependencias_home_page.dart';
 // Sub-Rotas
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/conceito/conceito.dart';
@@ -32,6 +30,11 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/putAsync/put
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/create/create.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/update.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/delete.dart';
+// Bindings
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_exemplo.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/middleware_binding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -92,12 +95,17 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/lazyPut', page: () => LazyPut()),
             GetPage(name: '/putAsync', page: () => PutAsync()),
             GetPage(name: '/create', page: () => Create()),
-            GetPage(name: '/update', page: () => Update(), children: [
-              GetPage(name: '/delete', page: () => Delete()),
-            ]),
+            GetPage(
+              name: '/update',
+              page: () => Update(),
+              children: [
+                GetPage(name: '/delete', page: () => Delete()),
+              ],
+            ),
             GetPage(
               name: '/bindings',
               binding: BindingsExemplo(),
+              middlewares: [MiddlewareBinding()],
               page: () => BindingsPage(),
             ),
             GetPage(

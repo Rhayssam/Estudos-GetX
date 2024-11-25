@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_page.dart';
 
 class DependenciasHomePage extends StatelessWidget {
   const DependenciasHomePage({super.key});
@@ -66,6 +68,14 @@ class DependenciasHomePage extends StatelessWidget {
               texto: '9 - Bindings Builder',
               onPressed: () {
                 Get.toNamed('/dependencias_home_page/bindings_builder_put');
+              },
+            ),
+            CustomElevatedButton(
+              texto: '10 - Bindings sem rotas nomeada',
+              onPressed: () {
+                Get.to(() => BindingsPage(),
+                    binding: BindingsBuilder.put(
+                        () => BindingsController(nome: 'Binding sem rota')));
               },
             ),
           ],
