@@ -35,6 +35,8 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bin
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_exemplo.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/middleware_binding.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/initialBinding/initialBinding.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/initialBinding/initialBinding_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,6 +47,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: InitialBinding(),
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -122,6 +125,10 @@ class MyApp extends StatelessWidget {
               binding: BindingsBuilder.put(
                   () => BindingsController(nome: 'Bindings Builder Put')),
               page: () => BindingsPage(),
+            ),
+            GetPage(
+              name: '/initial_binding',
+              page: () => InitialBindingPage(),
             ),
           ],
         ),

@@ -78,6 +78,12 @@ class DependenciasHomePage extends StatelessWidget {
                         () => BindingsController(nome: 'Binding sem rota')));
               },
             ),
+            CustomElevatedButton(
+              texto: '11 - Initial Binding',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/initial_binding');
+              },
+            ),
           ],
         ),
       ),
