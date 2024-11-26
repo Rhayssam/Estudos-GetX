@@ -84,6 +84,12 @@ class DependenciasHomePage extends StatelessWidget {
                 Get.toNamed('/dependencias_home_page/initial_binding');
               },
             ),
+            CustomElevatedButton(
+              texto: '12 - Services',
+              onPressed: () {
+                Get.toNamed('/dependencias_home_page/services');
+              },
+            ),
           ],
         ),
       ),

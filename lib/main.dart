@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_service.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -38,7 +40,9 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/mid
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/initialBinding/initialBinding.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/initialBinding/initialBinding_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Get.putAsync(() => StorageService().init());
   runApp(const MyApp());
 }
 
@@ -129,6 +133,10 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/initial_binding',
               page: () => InitialBindingPage(),
+            ),
+            GetPage(
+              name: '/services',
+              page: () => StoragePage(),
             ),
           ],
         ),
