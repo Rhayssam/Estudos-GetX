@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_service.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -32,13 +30,16 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/putAsync/put
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/create/create.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/update.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/delete-update/delete.dart';
-// Bindings
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_controller.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_exemplo.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/bindings_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/bindings/middleware_binding.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/initialBinding/initialBinding.dart';
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/initialBinding/initialBinding_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_service.dart';
+// 4 - Gerenciamento de Estado
+import 'package:jornada_getx/features/gerenciamento_de_estado/estado_home_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -140,6 +141,11 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
+        //* Estudo do Gerenciamento de Estado
+        GetPage(
+          name: '/estado_home_page',
+          page: () => EstadoHomePage(),
+        )
       ],
     );
   }
