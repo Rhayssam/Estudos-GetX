@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -145,6 +146,12 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/estado_home_page',
           page: () => EstadoHomePage(),
+          children: [
+            GetPage(
+              name: '/inicial',
+              page: () => Inicial(),
+            ),
+          ],
         )
       ],
     );

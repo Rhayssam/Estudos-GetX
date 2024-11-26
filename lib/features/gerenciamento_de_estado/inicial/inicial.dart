@@ -3,21 +3,26 @@ import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 
-class EstadoHomePage extends StatelessWidget {
-  const EstadoHomePage({super.key});
+class Inicial extends StatelessWidget {
+  final _counter = 0.obs;
+  Inicial({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: '4 - Gerenciamento de Estado'),
+      appBar: CustomAppBar(title: '1 - Inicial'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('Contador: '),
+            Obx(
+              () => Text('${_counter.value}'),
+            ),
             CustomElevatedButton(
-              texto: '1 - Inicial',
+              texto: 'Somar 1',
               onPressed: () {
-                Get.toNamed('/estado_home_page/inicial');
+                _counter.value++;
               },
             ),
           ],

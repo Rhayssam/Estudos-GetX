@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             CustomElevatedButton(
-              texto: '4 - Gerenciamento de Dependências',
+              texto: '4 - Gerenciamento de Estado',
               onPressed: () {
                 Get.toNamed('/estado_home_page');
               },
