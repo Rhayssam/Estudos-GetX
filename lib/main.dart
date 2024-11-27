@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_page.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -150,6 +152,14 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/inicial',
               page: () => Inicial(),
+            ),
+            GetPage(
+              name: '/tipos',
+              page: () => TiposPage(),
+            ),
+            GetPage(
+              name: '/tipos_genericos',
+              page: () => TiposGenericos(),
             ),
           ],
         )

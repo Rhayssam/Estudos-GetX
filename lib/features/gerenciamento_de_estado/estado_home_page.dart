@@ -20,6 +20,18 @@ class EstadoHomePage extends StatelessWidget {
                 Get.toNamed('/estado_home_page/inicial');
               },
             ),
+            CustomElevatedButton(
+              texto: '2 - Tipos Reativos',
+              onPressed: () {
+                Get.toNamed('/estado_home_page/tipos');
+              },
+            ),
+            CustomElevatedButton(
+              texto: '3 - Tipos Reativos Genéricos',
+              onPressed: () {
+                Get.toNamed('/estado_home_page/tipos_genericos');
+              },
+            ),
           ],
         ),
       ),
