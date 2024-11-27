@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_obs.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_page.dart';
 
 // Rota inicial
@@ -156,6 +157,7 @@ class MyApp extends StatelessWidget {
             GetPage(
                 name: '/tipos_genericos_nulos',
                 page: () => TiposGenericosNulos()),
+            GetPage(name: '/tipos_obs', page: () => TiposObs()),
           ],
         )
       ],

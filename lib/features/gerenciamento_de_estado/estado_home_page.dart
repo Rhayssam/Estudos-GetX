@@ -38,6 +38,12 @@ class EstadoHomePage extends StatelessWidget {
                 Get.toNamed('/estado_home_page/tipos_genericos_nulos');
               },
             ),
+            CustomElevatedButton(
+              texto: '5 - Tipos OBS',
+              onPressed: () {
+                Get.toNamed('/estado_home_page/tipos_obs');
+              },
+            ),
           ],
         ),
       ),
