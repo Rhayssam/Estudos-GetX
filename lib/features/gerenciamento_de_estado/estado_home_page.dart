@@ -44,6 +44,12 @@ class EstadoHomePage extends StatelessWidget {
                 Get.toNamed('/estado_home_page/tipos_obs');
               },
             ),
+            CustomElevatedButton(
+              texto: '6 - Atualização Objetos',
+              onPressed: () {
+                Get.toNamed('/estado_home_page/atualizacao_objetos');
+              },
+            ),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/atualizacao/atualizacao_objetos.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
@@ -158,6 +159,8 @@ class MyApp extends StatelessWidget {
                 name: '/tipos_genericos_nulos',
                 page: () => TiposGenericosNulos()),
             GetPage(name: '/tipos_obs', page: () => TiposObs()),
+            GetPage(
+                name: '/atualizacao_objetos', page: () => AtualizacaoObjetos()),
           ],
         )
       ],
