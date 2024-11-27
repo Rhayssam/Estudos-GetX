@@ -32,6 +32,12 @@ class EstadoHomePage extends StatelessWidget {
                 Get.toNamed('/estado_home_page/tipos_genericos');
               },
             ),
+            CustomElevatedButton(
+              texto: '4 - Tipos Genéricos Nulos',
+              onPressed: () {
+                Get.toNamed('/estado_home_page/tipos_genericos_nulos');
+              },
+            ),
           ],
         ),
       ),
