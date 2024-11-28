@@ -1,12 +1,15 @@
 import 'package:get/get.dart';
 
 class Controller extends GetxController {
-  final nome = 'Rhayssam'.obs;
+  final _nome = 'Rhayssam'.obs;
+
+  String get nome => _nome.value;
 
   @override
-  void onInit() {
-    print('onInit');
+  Future<void> onInit() async {
     super.onInit();
+    await 2.seconds.delay();
+    print('onInit');
   }
 
   @override
@@ -22,6 +25,6 @@ class Controller extends GetxController {
   }
 
   void alterarNome() {
-    nome('Rhaydev');
+    _nome('Rhaydev');
   }
 }

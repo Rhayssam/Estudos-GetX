@@ -4,6 +4,7 @@ import 'package:jornada_getx/features/gerenciamento_de_estado/atualizacao/atuali
 import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controller.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controllers_home_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getx_controller_example.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/getx_widget/getx_widget_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
@@ -200,6 +201,7 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
+            GetPage(name: '/getx_widget', page: () => GetxWidgetPage())
           ],
         )
       ],

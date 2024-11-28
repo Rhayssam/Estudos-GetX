@@ -54,7 +54,15 @@ class EstadoHomePage extends StatelessWidget {
               texto: '7 - Controllers',
               onPressed: () {
                 Get.toNamed(
-                  '/estado_home_page/controllers/getx_controller_example',
+                  '/estado_home_page/controllers',
+                );
+              },
+            ),
+            CustomElevatedButton(
+              texto: '8 - GetX Widget',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/getx_widget',
                 );
               },
             ),

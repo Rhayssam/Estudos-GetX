@@ -29,13 +29,20 @@ class _GetxControllerExampleState extends State<GetxControllerExample> {
           children: [
             Obx(
               () {
-                return Text(Get.find<Controller>().nome.value);
+                return Text(Get.find<Controller>().nome);
               },
             ),
             CustomElevatedButton(
               texto: 'Alterar nome',
               onPressed: () {
                 Get.find<Controller>().alterarNome();
+              },
+            ),
+            CustomElevatedButton(
+              texto: 'Recarregar nome',
+              onPressed: () {
+                setState(() {});
+                Get.reload<Controller>();
               },
             ),
           ],

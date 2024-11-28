@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
 
@@ -8,13 +9,18 @@ class ControllersHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Controllers Home'),
+      appBar: CustomAppBar(title: '7 - Controllers Home'),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomElevatedButton(
               texto: 'Controller 1',
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/controllers/getx_controller_example',
+                );
+              },
             ),
           ],
         ),
