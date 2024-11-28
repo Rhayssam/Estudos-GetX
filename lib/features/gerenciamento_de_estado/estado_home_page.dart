@@ -50,6 +50,14 @@ class EstadoHomePage extends StatelessWidget {
                 Get.toNamed('/estado_home_page/atualizacao_objetos');
               },
             ),
+            CustomElevatedButton(
+              texto: '7 - Controllers',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/controllers/getx_controller_example',
+                );
+              },
+            ),
           ],
         ),
       ),

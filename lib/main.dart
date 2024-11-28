@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/atualizacao/atualizacao_objetos.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controllers_home_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getx_controller_example.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
@@ -86,11 +89,9 @@ class MyApp extends StatelessWidget {
           name: '/rotas_nomeadas_home_page',
           page: () => RotasNomeadasHomePage(),
           children: [
-            //* Rotas pertencentes ao tema estudo de rotas nomeadas
             GetPage(
               name: '/iniciais',
               page: () => Iniciais(),
-              //* Rotas pertencentes ao tema estudo de rotas nomeadas
               children: [
                 GetPage(name: '/page1', page: () => Page1()),
                 GetPage(name: '/page2', page: () => Page2()),
@@ -113,13 +114,18 @@ class MyApp extends StatelessWidget {
               name: '/update',
               page: () => Update(),
               children: [
-                GetPage(name: '/delete', page: () => Delete()),
+                GetPage(
+                  name: '/delete',
+                  page: () => Delete(),
+                ),
               ],
             ),
             GetPage(
               name: '/bindings',
               binding: BindingsExemplo(),
-              middlewares: [MiddlewareBinding()],
+              middlewares: [
+                MiddlewareBinding(),
+              ],
               page: () => BindingsPage(),
             ),
             GetPage(
@@ -134,7 +140,10 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/bindings_builder_put',
               binding: BindingsBuilder.put(
-                  () => BindingsController(nome: 'Bindings Builder Put')),
+                () => BindingsController(
+                  nome: 'Bindings Builder Put',
+                ),
+              ),
               page: () => BindingsPage(),
             ),
             GetPage(
@@ -152,15 +161,45 @@ class MyApp extends StatelessWidget {
           name: '/estado_home_page',
           page: () => EstadoHomePage(),
           children: [
-            GetPage(name: '/inicial', page: () => Inicial()),
-            GetPage(name: '/tipos', page: () => TiposPage()),
-            GetPage(name: '/tipos_genericos', page: () => TiposGenericos()),
             GetPage(
-                name: '/tipos_genericos_nulos',
-                page: () => TiposGenericosNulos()),
-            GetPage(name: '/tipos_obs', page: () => TiposObs()),
+              name: '/inicial',
+              page: () => Inicial(),
+            ),
             GetPage(
-                name: '/atualizacao_objetos', page: () => AtualizacaoObjetos()),
+              name: '/tipos',
+              page: () => TiposPage(),
+            ),
+            GetPage(
+              name: '/tipos_genericos',
+              page: () => TiposGenericos(),
+            ),
+            GetPage(
+              name: '/tipos_genericos_nulos',
+              page: () => TiposGenericosNulos(),
+            ),
+            GetPage(
+              name: '/tipos_obs',
+              page: () => TiposObs(),
+            ),
+            GetPage(
+              name: '/atualizacao_objetos',
+              page: () => AtualizacaoObjetos(),
+            ),
+            GetPage(
+              name: '/controllers',
+              page: () => ControllersHomePage(),
+              children: [
+                GetPage(
+                  name: '/getx_controller_example',
+                  binding: BindingsBuilder(
+                    () {
+                      Get.lazyPut(() => Controller());
+                    },
+                  ),
+                  page: () => GetxControllerExample(),
+                ),
+              ],
+            ),
           ],
         )
       ],
