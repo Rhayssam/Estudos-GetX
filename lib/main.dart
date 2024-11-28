@@ -10,6 +10,7 @@ import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_generi
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_obs.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/widget_estado_local/local_state_widget.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -201,7 +202,9 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
-            GetPage(name: '/getx_widget', page: () => GetxWidgetPage())
+            GetPage(name: '/getx_widget', page: () => GetxWidgetPage()),
+            GetPage(
+                name: '/local_state_widget', page: () => LocalStateWidget()),
           ],
         )
       ],

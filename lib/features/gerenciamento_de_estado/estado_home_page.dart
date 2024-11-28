@@ -66,6 +66,14 @@ class EstadoHomePage extends StatelessWidget {
                 );
               },
             ),
+            CustomElevatedButton(
+              texto: '9 - Local State Widget',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/local_state_widget',
+                );
+              },
+            ),
           ],
         ),
       ),
