@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/full_life_cycle_controller/example_full_life_cycle_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/full_life_cycle_controller/example_full_life_cycle_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/getBuilder/get_builder_controller.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/getBuilder/get_builder_page.dart';
 
@@ -43,9 +45,9 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/stor
 // 4 - Gerenciamento de Estado
 import 'package:jornada_getx/features/gerenciamento_de_estado/estado_home_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/atualizacao/atualizacao_objetos.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getxController/controller.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controllers_home_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getx_controller_example.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getxController/getx_controller_example.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/firstRebuild/first_rebuild_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/getx_widget/getx_widget_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
@@ -202,6 +204,13 @@ class MyApp extends StatelessWidget {
                   binding: BindingsBuilder(() {
                     Get.lazyPut(() => Controller());
                   }),
+                ),
+                GetPage(
+                  name: '/full_life_cycle',
+                  page: () => ExampleFullLifeCyclePage(),
+                  binding: BindingsBuilder.put(
+                    () => ExampleFullLifeCycleController(),
+                  ),
                 ),
               ],
             ),

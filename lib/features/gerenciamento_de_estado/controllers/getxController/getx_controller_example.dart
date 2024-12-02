@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jornada_getx/core/widgets/custom_app_bar.dart';
 import 'package:jornada_getx/core/widgets/custom_elevated_button.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getxController/controller.dart';
 
 class GetxControllerExample extends StatefulWidget {
   const GetxControllerExample({super.key});

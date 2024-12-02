@@ -15,10 +15,18 @@ class ControllersHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomElevatedButton(
-              texto: 'Controller 1',
+              texto: 'Controller GetX',
               onPressed: () {
                 Get.toNamed(
                   '/estado_home_page/controllers/getx_controller_example',
+                );
+              },
+            ),
+            CustomElevatedButton(
+              texto: 'Full Life Cycle',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/controllers/full_life_cycle',
                 );
               },
             ),
