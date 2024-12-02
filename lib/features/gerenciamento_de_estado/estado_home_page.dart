@@ -82,6 +82,14 @@ class EstadoHomePage extends StatelessWidget {
                 );
               },
             ),
+            CustomElevatedButton(
+              texto: '11 - First Rebuild',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/first_rebuild',
+                );
+              },
+            ),
           ],
         ),
       ),
