@@ -90,6 +90,14 @@ class EstadoHomePage extends StatelessWidget {
                 );
               },
             ),
+            CustomElevatedButton(
+              texto: '12 - Get Builder',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/get_builder',
+                );
+              },
+            ),
           ],
         ),
       ),

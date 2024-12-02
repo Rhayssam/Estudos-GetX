@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/atualizacao/atualizacao_objetos.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controller.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controllers_home_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getx_controller_example.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/firstRebuild/first_rebuild_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/getx_widget/getx_widget_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_obs.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_page.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/widget_estado_local/local_state_widget.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/workers/workers_controller.dart';
-import 'package:jornada_getx/features/gerenciamento_de_estado/workers/workers_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/getBuilder/get_builder_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/getBuilder/get_builder_page.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -54,6 +42,20 @@ import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/stor
 import 'package:jornada_getx/features/gerenciamento_de_dependencias/service/storage_service.dart';
 // 4 - Gerenciamento de Estado
 import 'package:jornada_getx/features/gerenciamento_de_estado/estado_home_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/atualizacao/atualizacao_objetos.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/controllers_home_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/getx_controller_example.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/firstRebuild/first_rebuild_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/getx_widget/getx_widget_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/inicial/inicial.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_genericos_nulos.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_obs.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/widget_estado_local/local_state_widget.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/workers/workers_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/workers/workers_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -221,6 +223,13 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/first_rebuild',
               page: () => FirstRebuildPage(),
+            ),
+            GetPage(
+              name: '/get_builder',
+              page: () => GetBuilderPage(),
+              binding: BindingsBuilder.put(
+                () => GetBuilderController(),
+              ),
             ),
           ],
         )
