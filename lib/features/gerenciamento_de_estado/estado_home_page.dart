@@ -74,6 +74,14 @@ class EstadoHomePage extends StatelessWidget {
                 );
               },
             ),
+            CustomElevatedButton(
+              texto: '10 - Workers',
+              onPressed: () {
+                Get.toNamed(
+                  '/estado_home_page/workers',
+                );
+              },
+            ),
           ],
         ),
       ),

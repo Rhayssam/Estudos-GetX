@@ -11,6 +11,8 @@ import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_generi
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_obs.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/tipos/tipos_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/widget_estado_local/local_state_widget.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/workers/workers_controller.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/workers/workers_page.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -124,29 +126,29 @@ class MyApp extends StatelessWidget {
             ),
             GetPage(
               name: '/bindings',
+              page: () => BindingsPage(),
               binding: BindingsExemplo(),
               middlewares: [
                 MiddlewareBinding(),
               ],
-              page: () => BindingsPage(),
             ),
             GetPage(
               name: '/bindings_builder',
+              page: () => BindingsPage(),
               binding: BindingsBuilder(
                 () {
                   Get.put(BindingsController(nome: 'Bindings Builder'));
                 },
               ),
-              page: () => BindingsPage(),
             ),
             GetPage(
               name: '/bindings_builder_put',
+              page: () => BindingsPage(),
               binding: BindingsBuilder.put(
                 () => BindingsController(
                   nome: 'Bindings Builder Put',
                 ),
               ),
-              page: () => BindingsPage(),
             ),
             GetPage(
               name: '/initial_binding',
@@ -193,18 +195,28 @@ class MyApp extends StatelessWidget {
               children: [
                 GetPage(
                   name: '/getx_controller_example',
-                  binding: BindingsBuilder(
-                    () {
-                      Get.lazyPut(() => Controller());
-                    },
-                  ),
                   page: () => GetxControllerExample(),
+                  binding: BindingsBuilder(() {
+                    Get.lazyPut(() => Controller());
+                  }),
                 ),
               ],
             ),
-            GetPage(name: '/getx_widget', page: () => GetxWidgetPage()),
             GetPage(
-                name: '/local_state_widget', page: () => LocalStateWidget()),
+              name: '/getx_widget',
+              page: () => GetxWidgetPage(),
+            ),
+            GetPage(
+              name: '/local_state_widget',
+              page: () => LocalStateWidget(),
+            ),
+            GetPage(
+              name: '/workers',
+              page: () => WorkersPage(),
+              binding: BindingsBuilder.put(
+                () => WorkersController(),
+              ),
+            ),
           ],
         )
       ],
