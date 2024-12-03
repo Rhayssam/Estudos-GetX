@@ -4,6 +4,8 @@ import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/full_l
 import 'package:jornada_getx/features/gerenciamento_de_estado/controllers/full_life_cycle_controller/example_full_life_cycle_page.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/getBuilder/get_builder_controller.dart';
 import 'package:jornada_getx/features/gerenciamento_de_estado/getBuilder/get_builder_page.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/stateMixin/home_bindings.dart';
+import 'package:jornada_getx/features/gerenciamento_de_estado/stateMixin/state_mixin_page.dart';
 
 // Rota inicial
 import 'package:jornada_getx/home_page.dart';
@@ -239,6 +241,11 @@ class MyApp extends StatelessWidget {
               binding: BindingsBuilder.put(
                 () => GetBuilderController(),
               ),
+            ),
+            GetPage(
+              name: '/state_mixin',
+              page: () => StateMixinPage(),
+              binding: HomeBindings(),
             ),
           ],
         )
